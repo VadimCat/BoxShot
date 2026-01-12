@@ -4,6 +4,7 @@ using Fusion;
 public class Arena : SimulationBehaviour
 {
     [field: SerializeField] public Transform[] SpawnPoints { get; private set; }
+    [field: SerializeField] public Color[] _playerSkins;
 
     private void Awake()
     {
@@ -14,6 +15,8 @@ public class Arena : SimulationBehaviour
 
     public void AssignPlayer(GameObject player, int index)
     {
-        player.transform.SetPositionAndRotation(SpawnPoints[index].position, SpawnPoints[index % SpawnPoints.Length].rotation);
+        var indexClamped = index % _playerSkins.Length;
+        player.transform.SetPositionAndRotation(SpawnPoints[indexClamped].position, SpawnPoints[indexClamped].rotation);
+        player.transform.GetComponent<PlayerSkin>().SetSkin(_playerSkins[indexClamped]);
     }
 }

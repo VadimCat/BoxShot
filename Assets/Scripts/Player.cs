@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 public class Player : NetworkBehaviour
 {
     [SerializeField] private CharacterController _controller;
-
+    
     private InputSystem_Actions _input;
     private float PlayerSpeed = 10f;
     private Plane _plane = new Plane(Vector3.up, Vector3.zero);

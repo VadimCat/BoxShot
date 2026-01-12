@@ -11,7 +11,6 @@ public class PlayerConnectionHandler : SimulationBehaviour, IPlayerJoined
         Debug.Log("Player joined: " + player);
         if(player == Runner.LocalPlayer)
         {
-            Debug.Log("Assigning player to arena: " + player.AsIndex);
             _arena.AssignPlayer(Runner.Spawn(_playerPrefab).gameObject, player.AsIndex);
         }
     }

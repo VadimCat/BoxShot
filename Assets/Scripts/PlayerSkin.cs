@@ -14,10 +14,15 @@ public class PlayerSkin : NetworkBehaviour
         foreach(var meshRenderer in _meshRenderers)
         {
             var propertyBlock = new MaterialPropertyBlock();
-            propertyBlock.SetColor("_Color", color);
+            propertyBlock.SetColor("_Color", _skinColor);
             meshRenderer.SetPropertyBlock(propertyBlock);
         }
 
-        _light.color = color;
+        _light.color = _skinColor;
+    }
+
+    public void SetSkin(Color color)
+    {
+        _skinColor = color;
     }
 }

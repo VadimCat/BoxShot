@@ -36,7 +36,8 @@ public class Player : NetworkBehaviour
         if (hit)
         {
             var point = mouseRay.GetPoint(distance);
-            _controller.transform.LookAt(point);
+            _controller.transform.LookAt(point + Vector3.up);
+            _controller.transform.localRotation = Quaternion.Euler(0f, _controller.transform.localRotation.eulerAngles.y, 0f);
         }
         _controller.Move(moveRelativeToCamera * Runner.DeltaTime * PlayerSpeed);
     }

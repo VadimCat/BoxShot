@@ -9,7 +9,7 @@ public class PlayerSkin : NetworkBehaviour
     [SerializeField] private MeshRenderer[] _meshRenderers;
     [SerializeField] private Light _light;
 
-    public void SetSkin(Color color)
+    private void SetSkin()
     {
         foreach(var meshRenderer in _meshRenderers)
         {

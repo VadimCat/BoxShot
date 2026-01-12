@@ -268,7 +268,6 @@ GameObject:
   - component: {fileID: 882560405906977877}
   - component: {fileID: 2474270172247141908}
   - component: {fileID: 3497623005647408527}
-  - component: {fileID: 4135163826857526945}
   - component: {fileID: 857118791508806009}
   - component: {fileID: 5449195145951510401}
   - component: {fileID: 1853577429577585302}
@@ -353,29 +352,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &4135163826857526945
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6256998477695304758}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!143 &857118791508806009
 CharacterController:
   m_ObjectHideFlags: 0
@@ -419,6 +395,7 @@ MonoBehaviour:
   NestedObjects: []
   NetworkedBehaviours:
   - {fileID: 1853577429577585302}
+  - {fileID: 621591163444462257}
   ForceRemoteRenderTimeframe: 0
 --- !u!114 &1853577429577585302
 MonoBehaviour:
@@ -449,3 +426,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd08587ca847b66419ca57684d0c7340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
+  _controller: {fileID: 857118791508806009}

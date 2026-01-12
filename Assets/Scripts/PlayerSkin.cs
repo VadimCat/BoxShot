@@ -11,16 +11,22 @@ public class PlayerSkin : NetworkBehaviour
 
     private void UpdateRender()
     {
+        if(!HasStateAuthority)
+            return;
         foreach(var meshRenderer in _meshRenderers)
         {
             var propertyBlock = new MaterialPropertyBlock();
             meshRenderer.GetPropertyBlock(propertyBlock);
             propertyBlock.SetColor("_BaseColor", SkinColor);
             meshRenderer.SetPropertyBlock(propertyBlock);
-            // meshRenderer.material.color = SkinColor;
         }
 
         _light.color = SkinColor;
+    }
+
+    public override void Spawned()
+    {
+        UpdateRender();
     }
 
     public void SetSkin(Color color)

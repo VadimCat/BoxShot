@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 public class Player : NetworkBehaviour
 {
     [SerializeField] private CharacterController _controller;
-    
+
     private InputSystem_Actions _input;
     private float PlayerSpeed = 10f;
     private Plane _plane = new Plane(Vector3.up, Vector3.zero);
@@ -31,7 +31,6 @@ public class Player : NetworkBehaviour
         var moveRelativeToCamera = cameraForward * input.y + cameraRight * input.x;
 
         var look = _input.Player.ScreenPoint.ReadValue<Vector2>();
-        Debug.LogError(look);
         var mouseRay = Camera.main.ScreenPointToRay(look);
         var hit = _plane.Raycast(mouseRay, out var distance);
         if (hit)

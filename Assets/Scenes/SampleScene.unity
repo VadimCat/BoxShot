@@ -277,7 +277,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c80cd4c46fe005e48bca167dd9a4f7b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerConnectionHandler
-  _networkEvents: {fileID: 321929301}
   _playerPrefab: {fileID: 6256998477695304758, guid: 4b05003fc6edccc42b15e14376d7f16e, type: 3}
   _arena: {fileID: 903998423}
 --- !u!1 &330585543
@@ -928,6 +927,11 @@ MonoBehaviour:
   - {fileID: 186117730}
   - {fileID: 2108869060}
   - {fileID: 742250328}
+  _playerSkins:
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0.9780209, g: 1, b: 0, a: 1}
+  - {r: 0.161098, g: 1, b: 0, a: 1}
 --- !u!1 &1064104678
 GameObject:
   m_ObjectHideFlags: 0

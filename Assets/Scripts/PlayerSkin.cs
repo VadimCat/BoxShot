@@ -1,7 +1,10 @@
 using UnityEngine;
 
-public class PlayerSkin : MonoBehaviour
+public class PlayerSkin : NetworkBehaviour
 {
+    [Networked, OnChanged(nameof(OnSkinColorChanged))]
+    private Color _skinColor { get; set; }
+
     [SerializeField] private MeshRenderer[] _meshRenderers;
     [SerializeField] private Light _light;
 

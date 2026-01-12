@@ -8,7 +8,6 @@ public class PlayerConnectionHandler : SimulationBehaviour, IPlayerJoined
 
     public void PlayerJoined(PlayerRef player)
     {
-        Debug.Log("Player joined: " + player);
         if(player == Runner.LocalPlayer)
         {
             _arena.AssignPlayer(Runner.Spawn(_playerPrefab).gameObject, player.AsIndex);

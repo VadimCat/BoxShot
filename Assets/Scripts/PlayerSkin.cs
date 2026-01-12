@@ -3,7 +3,7 @@ using Fusion;
 
 public class PlayerSkin : NetworkBehaviour
 {
-    [Networked, OnChanged(nameof(OnSkinColorChanged))]
+    [Networked, OnChangedRender(nameof(OnSkinColorChanged))]
     private Color _skinColor { get; set; }
 
     [SerializeField] private MeshRenderer[] _meshRenderers;
